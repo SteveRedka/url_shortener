@@ -1,0 +1,4 @@
+= form_for @shortened_link, url: { action: 'create' } do |f|
+  = f.label 'Shorten url'
+  = f.text_field :full_url
+  = f.submit 'Create'
