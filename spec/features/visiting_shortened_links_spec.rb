@@ -6,7 +6,7 @@ feature 'Visiting shortened links' do
 
   context 'with existing link' do
     it 'redirects properly' do
-      visit shortened_link_path(shortened_link.short_url)
+      visit shortened_link_redirect_path(shortened_link.short_url)
       expect(current_path).to eql(shortened_link.full_url)
     end
   end
